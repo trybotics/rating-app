@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import RatingList from './containers/RatingList'
 import RatingDetails from './containers/RatingDetails'
-import HeaderFooterMenu from './containers/HeaderFooterMenu'
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 
@@ -10,7 +9,6 @@ function App() {
   return (
     <div>
       <Router>
-        {/* <HeaderFooterMenu /> */}
         <Layout.Header title="Rating App" style={{ position: 'fixed', zIndex: 1, width: '100%' }}><h1 style={{color:'white'}}>Rating App</h1></Layout.Header>
         <Switch>
           <Route exact path="/" component={RatingList} />
