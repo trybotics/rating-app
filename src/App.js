@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import RatingList from './containers/RatingList'
 import RatingDetails from './containers/RatingDetails'
 import { Layout } from 'antd';
-// import 'antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 function App() {
   return (
