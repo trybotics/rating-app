@@ -15,6 +15,7 @@ export const getRatingList = () => {
                 ratingList = response.data.data
                 ratingList.map((value, index) => {
                     ratingList[index]['id'] = index + 1
+                    ratingList[index]['key'] = index + 1
                 })
                 dispatch(setRatingList(ratingList))
             })
@@ -38,9 +39,10 @@ export const getRatingDetails = (id) => {
             .then(response => {
                 let ratingList = response.data.data
                 for (var i = 0; i < ratingList.length; i++) {
-                    if ((i + 1) == id) {
+                    if ((i + 1) === Number(id)) {
                         ratingDetails = ratingList[i]
                         ratingDetails['id'] = i + 1
+                        ratingDetails['key'] = i + 1
                         break;
                     }
                 }

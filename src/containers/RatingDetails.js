@@ -12,7 +12,7 @@ function RatingDetails(props) {
   let ratingDetails = {};
   let ratingId = props.match.params.id;
   useEffect(() => {
-    if (props.location.ratingDetails == undefined) {
+    if (props.location.ratingDetails === undefined) {
       props.getRatingDetails(ratingId);
     }
   }, []);
